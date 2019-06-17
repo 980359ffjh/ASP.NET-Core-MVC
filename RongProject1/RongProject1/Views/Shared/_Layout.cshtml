@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    @*myselft css*@
+    <environment names="Development">
+        <link href="/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    </environment>
+
+    @*import CDN (online)*@
+    @*<environment names="Staging, Production">
+        <link src="https://ajax.aspnetcdn.com/ajax/bootstrap/4.0.0/css/bootstrap.css"
+                asp-fallback-href="/node_modules/jquery/dist/css/bootstrap.css"
+                asp-fallback-test-class="sr-only" asp-fallback-test-property="position">
+    </environment>*@
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Rong</a>
+            </div>
+            <div class="navbar-right">
+                @await Component.InvokeAsync("LoginLogout")
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        @RenderBody()
+        <footer>
+            @*命名為 footer，給予 Home -> Index.cshtml 應用*@
+            @*名稱要對應好才能使用*@
+            @RenderSection("footer", required: false)
+
+            @*for ViewComponent*@
+            @*建立 .cs 檔時根據 Component.InvokeAsync("???") 來讀取*@
+            @*example : Component.InvokeAsync("test") -> test.cs*@
+            @await Component.InvokeAsync("Greeting")
+        </footer>
+    </div>
+
+    @*myself js*@
+    <environment names="Development">
+        <script src="/node_modules/jquery/dist/jquery.js"></script>
+        <script src="/node_modules/jquery-validation/dist/jquery.validate.js"></script>
+        <script src="/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js"></script>
+    </environment>
+
+    @*import CDN (online)*@
+    @*<environment names="Staging, Production">
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"
+                asp-fallback-src="/node_modules/jquery/dist/jquery.js"
+                asp-fallback-test="window.jQuery">
+        </script>
+    </environment>*@
+</body>
+</html>

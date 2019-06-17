@@ -1,0 +1,11 @@
+C:\Users\user\source\repos\RongProject1\RongProject1\bin\Debug\netcoreapp2.0\RongProject1.deps.json
+C:\Users\user\source\repos\RongProject1\RongProject1\bin\Debug\netcoreapp2.0\RongProject1.runtimeconfig.json
+C:\Users\user\source\repos\RongProject1\RongProject1\bin\Debug\netcoreapp2.0\RongProject1.runtimeconfig.dev.json
+C:\Users\user\source\repos\RongProject1\RongProject1\bin\Debug\netcoreapp2.0\RongProject1.dll
+C:\Users\user\source\repos\RongProject1\RongProject1\bin\Debug\netcoreapp2.0\RongProject1.pdb
+C:\Users\user\source\repos\RongProject1\RongProject1\obj\Debug\netcoreapp2.0\RongProject1.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\RongProject1\RongProject1\obj\Debug\netcoreapp2.0\RongProject1.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\RongProject1\RongProject1\obj\Debug\netcoreapp2.0\RongProject1.AssemblyInfo.cs
+C:\Users\user\source\repos\RongProject1\RongProject1\obj\Debug\netcoreapp2.0\RongProject1.dll
+C:\Users\user\source\repos\RongProject1\RongProject1\obj\Debug\netcoreapp2.0\RongProject1.pdb
+C:\Users\user\source\repos\RongProject1\RongProject1\obj\Debug\netcoreapp2.0\RongProject1.csprojAssemblyReference.cache

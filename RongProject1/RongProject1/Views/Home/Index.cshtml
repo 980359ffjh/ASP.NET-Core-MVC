@@ -1,0 +1,64 @@
+﻿@* if you don't know your model have what key and value*@
+@model RongProject1.ViewModels.HomePageViewModel
+
+@{
+    ViewBag.Title = "Home";
+}
+
+@*<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Rong</title>
+    </head>
+    <body>*@
+<h1>Welcom!</h1>
+
+@*執行 Model.Restaurants 所有資料長度*@
+@*當執行第一筆資料，會先進行 _Summary.cshtml 所有的動作，再進行下一筆資料，直到 Model.Restaurant 當中的最後一筆*@
+@foreach (var restaurant in Model.Restaurants)
+{
+    //使用名為 _Summary 的 .cshtml 給入參數為 restaurant
+    @Html.Partial("_Summary", restaurant)
+}
+
+@*<table>
+    @foreach (var restaurant in Model.Restaurants)  // html & c#
+    {
+        <tr>
+            <td>
+                asp-route-id 就像 HTML 給予標籤 id 一樣
+                <button asp-action="Details" asp-route-id="@restaurant.Id" onclick="window.location.href='/home/details/@restaurant.Id'">Details</button>
+                <a asp-action="Details" asp-route-id="@restaurant.Id">Details</a>
+                <a asp-action="Edit" asp-route-id="@restaurant.Id">Edit</a>
+
+                利用 HTML5 的語法寫的
+                <button onclick="window.location.href='/home/details/@restaurant.Id'">Details</button>
+                <a href="/home/details/@restaurant.Id">Details</a>
+
+                單純 C# 寫法
+                @Html.ActionLink("View", "Details", new { id = restaurant.Id })
+            </td>
+            <td>@restaurant.Name</td>
+        </tr>
+    }
+</table>*@
+
+@*利用 TagHelper 來實踐 href*@
+@*asp-controller="Home" 可以不用，在這個 Index.cshtml 都共用*@
+@*<button asp-controller="Home" asp-action="Create">Create</button>*@
+<div>
+    <a class="btn btn-primary" asp-action="Create">Create</a>
+</div>
+
+@*@foreach (var restaurant in Model)
+            {
+                <div>@restaurant.Id</div>
+                <div>@restaurant.Name</div>
+            }
+    </body>
+    </html>*@
+
+@*對應到 Shared -> _Layout.cshtml 中 footer(自己命名的)*@
+@*名稱要對應到才能在此 Index.cshtml 當中使用*@
+@*@section footer{
+    <h3>@Model.CurrentMessage</h3>
+}*@

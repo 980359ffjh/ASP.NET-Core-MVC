@@ -1,0 +1,21 @@
+﻿@using RongProject1.Controllers
+@model RongProject1.Entities.Restaurant
+
+@{ 
+    ViewBag.Title = "Details";
+}
+
+<h1>@Model.Name</h1>
+
+<div>
+    Id : @Model.Id
+</div>
+<div>
+    Cuisine : @Model.Cuisine
+</div>
+<div>
+    @Html.ActionLink("Home", "Index")
+
+    @*another way*@
+    @*@Html.ActionLink("Home", nameof(HomeController.Index))*@
+</div>
